@@ -1,0 +1,128 @@
+.App{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;background-color: aquamarine;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.tree {
+  position: fixed;
+   /* Create positioning context for child elements */
+   width:250px;
+   height:500px;
+   /* transform: translateX(50%); */
+   border-radius:70% 20%;
+   border-width: 300px;
+   background-color:rgb(223, 243, 255);
+   bottom:0;
+   left:2%;
+}
+
+
+.branch {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid rgb(131, 206, 135);
+}
+
+.branch2 {
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 150px solid rgb(131, 206, 135);
+  position: absolute; 
+  top:20%;
+  left:-7%;
+}
+
+.branch3{
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid rgb(131, 206, 135);
+  position: absolute;
+  top:40%;
+  left:-20%;
+  
+}
+.trunk{
+  width: 70px;
+  height: 30%;
+  background-color: rgb(199, 84, 84);
+  position: absolute;
+  top:70%;
+  left:25%;
+}
+.giftbox{
+  
+   width:100px;
+   height:100px;
+   background-color:rgb(255, 201, 231);
+   position: relative;
+   top:50%;
+   left:60%;
+
+}
+.box{
+  width:48%;
+  height: 48%;
+  background-color: red;
+}
+.bow{
+  width:40px;
+  height:15px;
+  
+  position: relative;
+  top:27%;
+  left: 72%;
+}
+.bow2{
+  background-color:rgb(255, 201, 231);
+  width:20px;
+  height: 15px;
+  border-radius: 150% 100% 150% 0%;
+}
+.bow1{
+  background-color:rgb(255, 201, 231);
+  width:20px;
+  height: 15px;
+  border-radius: 100% 150% 0% 150%;
+  
+  
+}
+.dialog-box {
+  width: 40%;
+  height: auto;
+  background-color: rgba(255, 210, 210, 0.708); 
+  border: 2px solid red; 
+  border-radius: 10px; 
+  position: absolute;
+  top: 50%; 
+  left: 60%; 
+  transform: translate(-50%, -50%); 
+  padding: 20px; 
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.no-decoration {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.dialog-box h5{
+  color:  rgb(255, 0, 0);
+
+}
+.dialog-box-head{
+  border-bottom: 1px solid red;
+}
+
