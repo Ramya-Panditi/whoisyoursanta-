@@ -14,9 +14,8 @@ db.on('error',()=> console.log("ERROR"));
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}));
 const corsOptions = {
-    origin: ['https://whoisyoursanta-epdw.vercel.app'],  
+    origin: ['http://localhost:3000','https://whoisyoursanta.vercel.app'],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials:true,
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
