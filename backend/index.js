@@ -13,7 +13,13 @@ db.on('open', ()=> console.log("DB CONNECTED EHHE"));
 db.on('error',()=> console.log("ERROR"));
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}));
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000',  
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));  
 app.use("/",route);
 
 app.listen(4000,()=>{
