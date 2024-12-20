@@ -13,6 +13,7 @@ const Landing = () => {
     const create = ()=>{
         navigate("/create");
     }
+    axios.defaults.withCredentials = true;
     const joinroom =  async ()=>{
      
         if(!clickjoin){
