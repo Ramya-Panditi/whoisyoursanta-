@@ -8,7 +8,7 @@ import URL from '../links';
 const Landing = () => { 
     const navigate = useNavigate();
     
-    const [clickjoin,setClickJoin] = useState(false);
+    const [clickjoin,setClickJoin] = useState(false);   
     const [code,setCode] = useState('');
     const create = ()=>{
         navigate("/create");
