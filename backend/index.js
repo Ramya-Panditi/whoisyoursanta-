@@ -15,8 +15,9 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: ['http://localhost:3000','https://whoisyoursanta-epdw.vercel.app/'],  
+    origin: ['https://whoisyoursanta-frontend.onrender.com/'],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
