@@ -25,12 +25,7 @@ const corsOptions = {
 // Use the `cors` package
 app.use(cors(corsOptions));
 
-// Custom Middleware to Set Additional Headers
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://whoisyoursanta-frontend.onrender.com'); // Allow specific origin
-    res.header('Access-Control-Allow-Credentials', 'true'); // Ensure credentials are allowed
-    next();
-});
+
 
 app.use("/", route);
 
