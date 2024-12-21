@@ -23,7 +23,9 @@ const Landing = () => {
         console.log(code);
         // const data  = {roomcode:code};
         try{
-            const res = await axios.get(`${URL}/check/${code}`);
+           
+
+            const res = await axios.get(`${URL}/check/${code}`,{withCredentials:true});
             console.log(res);
             if(res.status === 404){
                 alert("No such room is available. Create a room first");
