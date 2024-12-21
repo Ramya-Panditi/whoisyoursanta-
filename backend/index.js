@@ -15,7 +15,7 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: ['https://whoisyoursanta-frontend.onrender.com/'],  
+    origin: ['https://whoisyoursanta-frontend.onrender.com'],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     
     allowedHeaders: ['Content-Type', 'Authorization'],
