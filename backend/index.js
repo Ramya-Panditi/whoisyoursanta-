@@ -17,7 +17,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 const corsOptions = {
     origin: ['https://whoisyoursanta-frontend.onrender.com'],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    
+    credentails:true,
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 

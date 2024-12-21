@@ -13,7 +13,7 @@ const RoomGenerate = () => {
   const addField = () => {
     setMembers([...members, { name: '', email: '' }]);
   };
-
+  axios.defaults.withCredentials = true;
   const generateRoomCode = () => {
     let res = '';
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
