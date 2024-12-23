@@ -3,7 +3,7 @@ const schema = require("./schema");
 const mongoose = require("mongoose");
 const emailHandler = require("express-async-handler");
 const nodemailer = require("nodemailer")
-const weblink = "http://localhost:3000/"
+const weblink = "https://whoisyoursanta-frontend.onrender.com/"
 
 
 const route = express.Router();

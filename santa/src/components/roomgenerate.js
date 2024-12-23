@@ -13,6 +13,10 @@ const RoomGenerate = () => {
   const addField = () => {
     setMembers([...members, { name: '', email: '' }]);
   };
+
+  const deleteField = () =>{
+    setMembers(members.slice(0,-1));
+  }
   axios.defaults.withCredentials = true;
   const generateRoomCode = () => {
     let res = '';
@@ -54,6 +58,7 @@ const RoomGenerate = () => {
         return;
       }
     }
+    
     setError('');
 
     const newRoomCode = generateRoomCode();
@@ -139,12 +144,25 @@ const RoomGenerate = () => {
                         type="button"
                         onClick={addField}
                         className="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center"
-                        style={{ width: '40px', height: '40px' }}
+                        style={{ width: '20px', height: '25px' }}
                       >
-                        <i className="fa-solid fa-user-plus" style={{ fontSize: '18px' }}></i>
+                        <i className="fa-solid fa-user-plus" style={{ fontSize: '10px' }}></i>
                       </button>
                     )}
                   </td>
+                  <td>
+                    {index === members.length -1 && members.length>3 && (
+                      <button
+                        type="button"
+                        onClick={deleteField}
+                        className="btn btn-outline-danger rounded-circle d-flex align-items-center justify-content-center"
+                        style={{ width: '20px', height: '25px' }}
+                      >
+                        <i className="fa-solid fa-trash" style={{ fontSize: '10px' }}></i>
+                      </button>
+                    )}
+                  </td>
+                  
                 </tr>
               ))}
             </tbody>
