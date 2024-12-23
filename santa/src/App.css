@@ -11,10 +11,10 @@
 
 .tree {
   position: fixed;
-   /* Create positioning context for child elements */
+  
    width:250px;
    height:500px;
-   /* transform: translateX(50%); */
+  
    border-radius:70% 20%;
    border-width: 300px;
    background-color:rgb(223, 243, 255);
@@ -126,3 +126,15 @@
   border-bottom: 1px solid red;
 }
 
+@media (max-width: 768px) {
+  .dialog-box {
+    width: 90%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    padding: 10px;
+  }
+
+
+}

@@ -16,21 +16,16 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 // CORS Options
 const corsOptions = {
-    origin: ['https://whoisyoursanta-frontend.onrender.com'],  
+    origin: ['https://whoisyoursanta-frontend.onrender.com','http://localhost:3000'],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials: true,  // Ensure 'Access-Control-Allow-Credentials' is included
+    credentials: true, 
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 // Use the `cors` package
 app.use(cors(corsOptions));
 
-// Custom Middleware to Set Additional Headers
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://whoisyoursanta-frontend.onrender.com'); // Allow specific origin
-    res.header('Access-Control-Allow-Credentials', 'true'); // Ensure credentials are allowed
-    next();
-});
+
 
 app.use("/", route);
 
